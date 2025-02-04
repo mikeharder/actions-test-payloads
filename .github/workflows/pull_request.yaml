@@ -9,4 +9,4 @@ jobs:
       - name: Print github.event
         uses: actions/github-script@v7
         with:
-          script: console.log(JSON.stringify(github, null, 2));
+          script: console.log(JSON.stringify(context, null, 2));
