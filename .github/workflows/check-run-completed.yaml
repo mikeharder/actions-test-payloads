@@ -1,0 +1,15 @@
+name: check-run-completed
+
+on:
+  check_run:
+    types:
+      - completed
+
+jobs:
+  print-context:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Print context
+        uses: actions/github-script@v7
+        with:
+          script: console.log(JSON.stringify(context, null, 2));
