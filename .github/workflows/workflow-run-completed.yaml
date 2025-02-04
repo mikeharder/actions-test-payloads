@@ -1,0 +1,14 @@
+name: workflow-run-completed
+
+on:
+  workflow_run:
+    workflows: ["pull-request"]
+    types:
+      - completed
+
+jobs:
+  print-event:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Print github.event
+        run: echo '${{ toJson(github.event) }}'
