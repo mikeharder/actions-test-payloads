@@ -1,8 +1,7 @@
-name: workflow-run-completed
+name: check-run-completed
 
 on:
-  workflow_run:
-    workflows: ["pull-request"]
+  check_run:
     types:
       - completed
 
